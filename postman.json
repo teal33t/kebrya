@@ -1,0 +1,461 @@
+{
+	"info": {
+		"_postman_id": "4358b328-15e3-47a3-9c71-806993241a87",
+		"name": "Kebrya API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15559860"
+	},
+	"item": [
+		{
+			"name": "Calculate Chart",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"latitude\": \"35.708309\",\n    \"longitude\": \"51.380730\",\n    \"year\": 1991,\n    \"month\": 11,\n    \"day\": 1,\n    \"hour\": 7,\n    \"min\": 45,\n    \"sec\": 0,\n    \"varga\": [\n            \"D1\",\n            \"D9\"\n        ],\n    \"nesting\": 2,\n    \"time_zone\": \"+03:30\",\n    \"infolevel\": [\"basic\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/chart",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"chart"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "ashtakavarga",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"latitude\": \"35.708309\",\n    \"longitude\": \"51.380730\",\n    \"year\": 1991,\n    \"month\": 11,\n    \"day\": 1,\n    \"hour\": 7,\n    \"min\": 45,\n    \"sec\": 0,\n    \"varga\": [\"D1\"],\n    \"nesting\": 0,\n    \"time_zone\": \"+03:30\",\n    \"infolevel\": [\"ashtakavarga\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://188.245.38.235:8000/api/chart",
+							"protocol": "http",
+							"host": [
+								"188",
+								"245",
+								"38",
+								"235"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"chart"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "grahabala",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"latitude\": \"35.708309\",\n    \"longitude\": \"51.380730\",\n    \"year\": 1991,\n    \"month\": 11,\n    \"day\": 1,\n    \"hour\": 7,\n    \"min\": 45,\n    \"sec\": 0,\n    \"varga\": [\"D1\"],\n    \"nesting\": 0,\n    \"time_zone\": \"+03:30\",\n    \"infolevel\": [\"grahabala\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/chart",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"chart"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "rashibala",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"latitude\": \"35.708309\",\n    \"longitude\": \"51.380730\",\n    \"year\": 1991,\n    \"month\": 11,\n    \"day\": 1,\n    \"hour\": 7,\n    \"min\": 45,\n    \"sec\": 0,\n    \"varga\": [\"D1\"],\n    \"nesting\": 0,\n    \"time_zone\": \"+03:30\",\n    \"infolevel\": [\"rashibala\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/chart",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"chart"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "yogas",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"latitude\": \"35.708309\",\n    \"longitude\": \"51.380730\",\n    \"year\": 1991,\n    \"month\": 11,\n    \"day\": 1,\n    \"hour\": 7,\n    \"min\": 45,\n    \"sec\": 0,\n    \"varga\": [\n            \"D1\"\n        ],\n    \"nesting\": 4,\n    \"time_zone\": \"+03:30\",\n    \"infolevel\": [\"yogas\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/chart",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"chart"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "full",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"latitude\": \"35.708309\",\n    \"longitude\": \"51.380730\",\n    \"year\": 1991,\n    \"month\": 11,\n    \"day\": 1,\n    \"hour\": 7,\n    \"min\": 45,\n    \"sec\": 0,\n    \"varga\": [\n            \"D1\",\n            \"D2\",\n            \"D3\",\n            \"D4\",\n            \"D7\",\n            \"D9\",\n            \"D10\",\n            \"D12\",\n            \"D16\",\n            \"D20\",\n            \"D24\",\n            \"D27\",\n            \"D30\",\n            \"D40\",\n            \"D45\",\n            \"D60\"\n        ],\n    \"nesting\": 4,\n    \"time_zone\": \"+03:30\",\n    \"infolevel\": [\"basic\", \"ashtakavarga\", \"grahabala\", \"rashibala\", \"yogas\", \"panchanga\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/chart",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"chart"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Calculate Panchanga Now",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"latitude\": \"35.708309\",\n    \"longitude\": \"51.380730\",\n    \"varga\": [\"D1\"],\n    \"nesting\": 0,\n    \"time_zone\": \"+03:30\",\n    \"infolevel\": [\"panchanga\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/panchanga",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"panchanga"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Calculate Panchanga",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"latitude\": \"35.708309\",\n    \"longitude\": \"51.380730\",\n    \"year\": 1991,\n    \"month\": 11,\n    \"day\": 1,\n    \"hour\": 7,\n    \"min\": 45,\n    \"sec\": 0,\n    \"varga\": [\"D1\"],\n    \"nesting\": 0,\n    \"time_zone\": \"+03:30\",\n    \"infolevel\": [\"panchanga\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/panchanga",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"panchanga"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Calculate Transit Chart",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"latitude\": \"35.708309\",\n    \"longitude\": \"51.380730\",\n    \"year\": 1991,\n    \"month\": 11,\n    \"day\": 1,\n    \"hour\": 7,\n    \"min\": 45,\n    \"sec\": 0,\n    \"t_year\": 2023,\n    \"t_month\": 11,\n    \"t_day\": 1,\n    \"t_hour\": 7,\n    \"t_min\": 45,\n    \"t_sec\": 0,\n    \"time_zone\": \"+03:30\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/transit-chart",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"transit-chart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Calculate Transit Chart Jalali",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"latitude\": \"35.708309\",\n    \"longitude\": \"51.380730\",\n    \"year\": 1370,\n    \"month\": 8,\n    \"day\": 10,\n    \"hour\": 7,\n    \"min\": 45,\n    \"sec\": 0,\n    \"t_year\": 1402,\n    \"t_month\": 4,\n    \"t_day\": 23,\n    \"t_hour\": 7,\n    \"t_min\": 45,\n    \"t_sec\": 0,\n    \"time_zone\": \"+03:30\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/jalali/transit-chart",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"jalali",
+						"transit-chart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Calculate Chart Jalali",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"latitude\": \"35.708309\",\n    \"longitude\": \"51.380730\",\n    \"year\": 1370,\n    \"month\": 8,\n    \"day\": 10,\n    \"hour\": 7,\n    \"min\": 45,\n    \"sec\": 0,\n    \"varga\": [\"D1\"],\n    \"nesting\": 2,\n    \"time_zone\": \"+03:30\",\n    \"infolevel\": []\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/jalali/chart",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"jalali",
+						"chart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Now Chart",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/now?timezone=Asia/Tehran&latitude=35.708309&longitude=51.380730",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"now"
+					],
+					"query": [
+						{
+							"key": "timezone",
+							"value": "Asia/Tehran"
+						},
+						{
+							"key": "latitude",
+							"value": "35.708309"
+						},
+						{
+							"key": "longitude",
+							"value": "51.380730"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ping",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/ping",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"ping"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://188.245.38.235:8000",
+			"type": "string"
+		}
+	]
+}

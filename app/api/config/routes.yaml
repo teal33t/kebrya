@@ -1,0 +1,7 @@
+# index:
+#    path: /
+#    controller: App\Controller\ApiController::index
+
+# calculate-chart:
+#    path: /api/calculate-chart
+#    controller: App\Controller\ApiController::calculateChart
