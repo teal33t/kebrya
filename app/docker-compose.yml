@@ -1,41 +1,12 @@
 version: '3.8'
 
 services:
-  php:
+  symfony_app:
     build:
-      context: .
+      context: ./api
       dockerfile: Dockerfile
-    volumes:
-      - ./:/var/www/html
-    depends_on:
-      - database
-
-  nginx:
-    image: nginx:stable-alpine
+    container_name: symfony_app
     ports:
-      - "8080:80"
+      - "8080:8080"
     volumes:
-      - ./:/var/www/html
-      - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
-    depends_on:
-      - php
-
-  database:
-    image: mysql:8.0
-    environment:
-      MYSQL_ROOT_PASSWORD: rootpassword
-      MYSQL_DATABASE: symfony
-      MYSQL_USER: symfony
-      MYSQL_PASSWORD: symfony
-    volumes:
-      - db-data:/var/lib/mysql
-
-  composer:
-    image: composer:latest
-    volumes:
-      - ./:/app
-    working_dir: /app
-    command: install
-
-volumes:
-  db-data:
+      - ./api:/var/www/api

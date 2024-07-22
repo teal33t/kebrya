@@ -1,0 +1,498 @@
+.
+├── api
+│   ├── bin
+│   │   └── console
+│   ├── composer.json
+│   ├── config
+│   │   ├── bundles.php
+│   │   ├── packages
+│   │   │   ├── cache.yaml
+│   │   │   ├── framework.yaml
+│   │   │   ├── routing.yaml
+│   │   │   └── translation.yaml
+│   │   ├── preload.php
+│   │   ├── routes
+│   │   │   ├── annotations.yaml
+│   │   │   └── framework.yaml
+│   │   ├── routes.yaml
+│   │   └── services.yaml
+│   ├── Dockerfile
+│   ├── lib
+│   │   ├── Alphabet
+│   │   │   ├── Devanagari.php
+│   │   │   ├── Exception
+│   │   │   │   ├── ExceptionInterface.php
+│   │   │   │   └── InvalidArgumentException.php
+│   │   │   ├── Greek.php
+│   │   │   └── Language.php
+│   │   ├── Bala
+│   │   │   ├── AshtakaVarga.php
+│   │   │   ├── GrahaBala.php
+│   │   │   └── RashiBala.php
+│   │   ├── Base
+│   │   │   ├── Analysis.php
+│   │   │   ├── BaseObject.php
+│   │   │   ├── Biblio.php
+│   │   │   ├── Data.php
+│   │   │   ├── Exception
+│   │   │   │   ├── ExceptionInterface.php
+│   │   │   │   ├── InvalidArgumentException.php
+│   │   │   │   └── UnderflowException.php
+│   │   │   ├── Import
+│   │   │   │   ├── ArraySource.php
+│   │   │   │   ├── ImportInterface.php
+│   │   │   │   ├── JagannathaHora.php
+│   │   │   │   └── SourceBase.php
+│   │   │   ├── Locality.php
+│   │   │   ├── Traits
+│   │   │   │   ├── DataTrait.php
+│   │   │   │   ├── EnvironmentTrait.php
+│   │   │   │   ├── FileTrait.php
+│   │   │   │   ├── GetTrait.php
+│   │   │   │   ├── OptionTrait.php
+│   │   │   │   └── SetTrait.php
+│   │   │   └── Utility.php
+│   │   ├── Bhava
+│   │   │   ├── Arudha.php
+│   │   │   ├── Bhava.php
+│   │   │   ├── Exception
+│   │   │   │   ├── ExceptionInterface.php
+│   │   │   │   └── InvalidArgumentException.php
+│   │   │   └── Object
+│   │   │       ├── B10.php
+│   │   │       ├── B11.php
+│   │   │       ├── B12.php
+│   │   │       ├── B1.php
+│   │   │       ├── B2.php
+│   │   │       ├── B3.php
+│   │   │       ├── B4.php
+│   │   │       ├── B5.php
+│   │   │       ├── B6.php
+│   │   │       ├── B7.php
+│   │   │       ├── B8.php
+│   │   │       ├── B9.php
+│   │   │       ├── BhavaBaseObject.php
+│   │   │       └── BhavaEnvironment.php
+│   │   ├── Calendar
+│   │   │   ├── Event
+│   │   │   │   ├── BengalHolidays.php
+│   │   │   │   ├── EventBase.php
+│   │   │   │   ├── IskconEvents.php
+│   │   │   │   ├── LordAppearance.php
+│   │   │   │   ├── LordPastimes.php
+│   │   │   │   └── RecentAcharyas.php
+│   │   │   └── Measure
+│   │   │       ├── Masa.php
+│   │   │       └── Varsha.php
+│   │   ├── Dasha
+│   │   │   ├── Dasha.php
+│   │   │   ├── Exception
+│   │   │   │   ├── ExceptionInterface.php
+│   │   │   │   ├── InvalidArgumentException.php
+│   │   │   │   ├── RuntimeException.php
+│   │   │   │   └── UnderflowException.php
+│   │   │   └── Object
+│   │   │       ├── AbstractDasha.php
+│   │   │       ├── Ashtottari.php
+│   │   │       └── Vimshottari.php
+│   │   ├── DateConvertor.php
+│   │   ├── Ganita
+│   │   │   ├── Astro.php
+│   │   │   ├── Ayanamsha.php
+│   │   │   ├── Exception
+│   │   │   │   ├── ExceptionInterface.php
+│   │   │   │   ├── InvalidArgumentException.php
+│   │   │   │   └── RuntimeException.php
+│   │   │   ├── Kala.php
+│   │   │   ├── Math.php
+│   │   │   ├── Matrix
+│   │   │   │   ├── MatrixBase.php
+│   │   │   │   ├── Reflection.php
+│   │   │   │   ├── Rotation.php
+│   │   │   │   ├── Scaling.php
+│   │   │   │   └── Translation.php
+│   │   │   ├── Matrix.php
+│   │   │   ├── Method
+│   │   │   │   ├── AbstractGanita.php
+│   │   │   │   ├── Exception
+│   │   │   │   │   ├── ExceptionInterface.php
+│   │   │   │   │   ├── InvalidArgumentException.php
+│   │   │   │   │   └── UnexpectedValueException.php
+│   │   │   │   └── Swetest.php
+│   │   │   └── Time.php
+│   │   ├── Graha
+│   │   │   ├── Avastha.php
+│   │   │   ├── Exception
+│   │   │   │   ├── ExceptionInterface.php
+│   │   │   │   ├── InvalidArgumentException.php
+│   │   │   │   └── UnexpectedValueException.php
+│   │   │   ├── Graha.php
+│   │   │   ├── Lagna.php
+│   │   │   ├── Object
+│   │   │   │   ├── Bu.php
+│   │   │   │   ├── Ch.php
+│   │   │   │   ├── GrahaBaseObject.php
+│   │   │   │   ├── GrahaEnvironment.php
+│   │   │   │   ├── Gu.php
+│   │   │   │   ├── Ke.php
+│   │   │   │   ├── Ma.php
+│   │   │   │   ├── Ra.php
+│   │   │   │   ├── Sa.php
+│   │   │   │   ├── Sk.php
+│   │   │   │   └── Sy.php
+│   │   │   └── Upagraha.php
+│   │   ├── Lib.php
+│   │   ├── MoonPhase.php
+│   │   ├── Muhurta
+│   │   │   ├── Hora.php
+│   │   │   ├── Muhurta.php
+│   │   │   ├── MuhurtaStamps.php
+│   │   │   ├── RahuKala.php
+│   │   │   ├── Samskara
+│   │   │   │   └── NamaKarana.php
+│   │   │   └── Samskara.php
+│   │   ├── Panchanga
+│   │   │   ├── AngaDefiner.php
+│   │   │   ├── AngaObject.php
+│   │   │   ├── Exception
+│   │   │   │   ├── ExceptionInterface.php
+│   │   │   │   ├── InvalidArgumentException.php
+│   │   │   │   └── RuntimeException.php
+│   │   │   ├── Karana
+│   │   │   │   └── Karana.php
+│   │   │   ├── Nakshatra
+│   │   │   │   ├── Nakshatra.php
+│   │   │   │   └── Object
+│   │   │   │       ├── N10.php
+│   │   │   │       ├── N11.php
+│   │   │   │       ├── N12.php
+│   │   │   │       ├── N13.php
+│   │   │   │       ├── N14.php
+│   │   │   │       ├── N15.php
+│   │   │   │       ├── N16.php
+│   │   │   │       ├── N17.php
+│   │   │   │       ├── N18.php
+│   │   │   │       ├── N19.php
+│   │   │   │       ├── N1.php
+│   │   │   │       ├── N20.php
+│   │   │   │       ├── N21.php
+│   │   │   │       ├── N22.php
+│   │   │   │       ├── N23.php
+│   │   │   │       ├── N24.php
+│   │   │   │       ├── N25.php
+│   │   │   │       ├── N26.php
+│   │   │   │       ├── N27.php
+│   │   │   │       ├── N28.php
+│   │   │   │       ├── N2.php
+│   │   │   │       ├── N3.php
+│   │   │   │       ├── N4.php
+│   │   │   │       ├── N5.php
+│   │   │   │       ├── N6.php
+│   │   │   │       ├── N7.php
+│   │   │   │       ├── N8.php
+│   │   │   │       ├── N9.php
+│   │   │   │       └── NakshatraObject.php
+│   │   │   ├── Panchanga.php
+│   │   │   ├── Tithi
+│   │   │   │   ├── Object
+│   │   │   │   │   ├── T10.php
+│   │   │   │   │   ├── T11.php
+│   │   │   │   │   ├── T12.php
+│   │   │   │   │   ├── T13.php
+│   │   │   │   │   ├── T14.php
+│   │   │   │   │   ├── T15.php
+│   │   │   │   │   ├── T16.php
+│   │   │   │   │   ├── T17.php
+│   │   │   │   │   ├── T18.php
+│   │   │   │   │   ├── T19.php
+│   │   │   │   │   ├── T1.php
+│   │   │   │   │   ├── T20.php
+│   │   │   │   │   ├── T21.php
+│   │   │   │   │   ├── T22.php
+│   │   │   │   │   ├── T23.php
+│   │   │   │   │   ├── T24.php
+│   │   │   │   │   ├── T25.php
+│   │   │   │   │   ├── T26.php
+│   │   │   │   │   ├── T27.php
+│   │   │   │   │   ├── T28.php
+│   │   │   │   │   ├── T29.php
+│   │   │   │   │   ├── T2.php
+│   │   │   │   │   ├── T30.php
+│   │   │   │   │   ├── T3.php
+│   │   │   │   │   ├── T4.php
+│   │   │   │   │   ├── T5.php
+│   │   │   │   │   ├── T6.php
+│   │   │   │   │   ├── T7.php
+│   │   │   │   │   ├── T8.php
+│   │   │   │   │   ├── T9.php
+│   │   │   │   │   └── TithiObject.php
+│   │   │   │   └── Tithi.php
+│   │   │   ├── Vara
+│   │   │   │   ├── Object
+│   │   │   │   │   ├── Bu.php
+│   │   │   │   │   ├── Ch.php
+│   │   │   │   │   ├── Gu.php
+│   │   │   │   │   ├── Ma.php
+│   │   │   │   │   ├── Sa.php
+│   │   │   │   │   ├── Sk.php
+│   │   │   │   │   ├── Sy.php
+│   │   │   │   │   └── VaraObject.php
+│   │   │   │   └── Vara.php
+│   │   │   └── Yoga
+│   │   │       ├── Object
+│   │   │       │   ├── Y10.php
+│   │   │       │   ├── Y11.php
+│   │   │       │   ├── Y12.php
+│   │   │       │   ├── Y13.php
+│   │   │       │   ├── Y14.php
+│   │   │       │   ├── Y15.php
+│   │   │       │   ├── Y16.php
+│   │   │       │   ├── Y17.php
+│   │   │       │   ├── Y18.php
+│   │   │       │   ├── Y19.php
+│   │   │       │   ├── Y1.php
+│   │   │       │   ├── Y20.php
+│   │   │       │   ├── Y21.php
+│   │   │       │   ├── Y22.php
+│   │   │       │   ├── Y23.php
+│   │   │       │   ├── Y24.php
+│   │   │       │   ├── Y25.php
+│   │   │       │   ├── Y26.php
+│   │   │       │   ├── Y27.php
+│   │   │       │   ├── Y2.php
+│   │   │       │   ├── Y3.php
+│   │   │       │   ├── Y4.php
+│   │   │       │   ├── Y5.php
+│   │   │       │   ├── Y6.php
+│   │   │       │   ├── Y7.php
+│   │   │       │   ├── Y8.php
+│   │   │       │   ├── Y9.php
+│   │   │       │   └── YogaObject.php
+│   │   │       └── Yoga.php
+│   │   ├── Rashi
+│   │   │   ├── Exception
+│   │   │   │   ├── ExceptionInterface.php
+│   │   │   │   ├── InvalidArgumentException.php
+│   │   │   │   └── UnexpectedValueException.php
+│   │   │   ├── Object
+│   │   │   │   ├── R10.php
+│   │   │   │   ├── R11.php
+│   │   │   │   ├── R12.php
+│   │   │   │   ├── R1.php
+│   │   │   │   ├── R2.php
+│   │   │   │   ├── R3.php
+│   │   │   │   ├── R4.php
+│   │   │   │   ├── R5.php
+│   │   │   │   ├── R6.php
+│   │   │   │   ├── R7.php
+│   │   │   │   ├── R8.php
+│   │   │   │   ├── R9.php
+│   │   │   │   ├── RashiBaseObject.php
+│   │   │   │   └── RashiEnvironment.php
+│   │   │   └── Rashi.php
+│   │   ├── Tattva
+│   │   │   ├── Ayurveda.php
+│   │   │   ├── Exception
+│   │   │   │   ├── ExceptionInterface.php
+│   │   │   │   └── InvalidArgumentException.php
+│   │   │   ├── Jiva
+│   │   │   │   ├── Nara
+│   │   │   │   │   ├── Deva.php
+│   │   │   │   │   └── Manusha.php
+│   │   │   │   ├── Nara.php
+│   │   │   │   └── Pasu.php
+│   │   │   ├── Jiva.php
+│   │   │   ├── Karaka.php
+│   │   │   └── Maha.php
+│   │   ├── Varga
+│   │   │   ├── Exception
+│   │   │   │   ├── ExceptionInterface.php
+│   │   │   │   └── InvalidArgumentException.php
+│   │   │   ├── Object
+│   │   │   │   ├── AbstractVarga.php
+│   │   │   │   ├── D10.php
+│   │   │   │   ├── D12.php
+│   │   │   │   ├── D16.php
+│   │   │   │   ├── D1.php
+│   │   │   │   ├── D20.php
+│   │   │   │   ├── D24.php
+│   │   │   │   ├── D27.php
+│   │   │   │   ├── D2.php
+│   │   │   │   ├── D30.php
+│   │   │   │   ├── D3.php
+│   │   │   │   ├── D40.php
+│   │   │   │   ├── D45.php
+│   │   │   │   ├── D4.php
+│   │   │   │   ├── D60.php
+│   │   │   │   ├── D7.php
+│   │   │   │   └── D9.php
+│   │   │   └── Varga.php
+│   │   └── Yoga
+│   │       ├── Exception
+│   │       │   ├── ExceptionInterface.php
+│   │       │   └── InvalidArgumentException.php
+│   │       ├── Type
+│   │       │   ├── Dhana.php
+│   │       │   ├── Mahapurusha.php
+│   │       │   ├── Nabhasha.php
+│   │       │   ├── Parivarthana.php
+│   │       │   ├── Raja.php
+│   │       │   ├── Sannyasa.php
+│   │       │   └── YogaBase.php
+│   │       └── Yoga.php
+│   ├── public
+│   │   └── index.php
+│   ├── src
+│   │   ├── Controller
+│   │   │   └── APIController.php
+│   │   └── Kernel.php
+│   ├── swetest
+│   │   ├── composer.json
+│   │   ├── docs
+│   │   │   ├── out
+│   │   │   ├── sweph.gif
+│   │   │   ├── swephin.gif
+│   │   │   ├── swephprg.htm
+│   │   │   ├── swephprg.pdf
+│   │   │   ├── swisseph.htm
+│   │   │   └── swisseph.pdf
+│   │   ├── README.md
+│   │   ├── src
+│   │   │   ├── fixstars.cat
+│   │   │   ├── libswe.a
+│   │   │   ├── LICENSE
+│   │   │   ├── Makefile
+│   │   │   ├── sedeltat.txt.inactive
+│   │   │   ├── sefstars.txt
+│   │   │   ├── seleapsec.txt
+│   │   │   ├── seorbel.txt
+│   │   │   ├── swecl.c
+│   │   │   ├── swecl.o
+│   │   │   ├── swedate.c
+│   │   │   ├── swedate.h
+│   │   │   ├── swedate.o
+│   │   │   ├── swedll.h
+│   │   │   ├── swehel.c
+│   │   │   ├── swehel.o
+│   │   │   ├── swehouse.c
+│   │   │   ├── swehouse.h
+│   │   │   ├── swehouse.o
+│   │   │   ├── swejpl.c
+│   │   │   ├── swejpl.h
+│   │   │   ├── swejpl.o
+│   │   │   ├── swemini.c
+│   │   │   ├── swemmoon.c
+│   │   │   ├── swemmoon.o
+│   │   │   ├── swemplan.c
+│   │   │   ├── swemplan.o
+│   │   │   ├── swemptab.c
+│   │   │   ├── swenut2000a.h
+│   │   │   ├── sweodef.h
+│   │   │   ├── swepcalc.c
+│   │   │   ├── swepcalc.h
+│   │   │   ├── swepcalc.o
+│   │   │   ├── swepdate.c
+│   │   │   ├── swepdate.o
+│   │   │   ├── sweph.c
+│   │   │   ├── swephexp.h
+│   │   │   ├── sweph.h
+│   │   │   ├── swephlib.c
+│   │   │   ├── swephlib.h
+│   │   │   ├── swephlib.o
+│   │   │   ├── sweph.o
+│   │   │   ├── swetest
+│   │   │   ├── swetest.c
+│   │   │   └── swetest.o
+│   │   ├── sweph
+│   │   │   ├── semo_00.se1
+│   │   │   ├── semo_06.se1
+│   │   │   ├── semo_12.se1
+│   │   │   ├── semo_18.se1
+│   │   │   ├── semo_24.se1
+│   │   │   ├── semom06.se1
+│   │   │   ├── semom12.se1
+│   │   │   ├── semom18.se1
+│   │   │   ├── semom24.se1
+│   │   │   ├── semom30.se1
+│   │   │   ├── sepl_00.se1
+│   │   │   ├── sepl_06.se1
+│   │   │   ├── sepl_12.se1
+│   │   │   ├── sepl_18.se1
+│   │   │   ├── sepl_24.se1
+│   │   │   ├── seplm06.se1
+│   │   │   ├── seplm12.se1
+│   │   │   ├── seplm18.se1
+│   │   │   ├── seplm24.se1
+│   │   │   └── seplm30.se1
+│   │   └── win
+│   │       └── swetest.exe
+│   ├── symfony.lock
+│   └── translations
+├── docker-compose.yml
+├── tests
+│   ├── bootstrap.php
+│   ├── README.md
+│   └── unit
+│       ├── Alphabet
+│       │   └── LanguageTest.php
+│       ├── Base
+│       │   ├── DataTest.php
+│       │   ├── Import
+│       │   │   ├── ArraySourceTest.php
+│       │   │   ├── data
+│       │   │   │   ├── array
+│       │   │   │   │   ├── array-source.php
+│       │   │   │   │   └── data-expected.php
+│       │   │   │   └── jh
+│       │   │   │       ├── BrandoMarlon.jhd
+│       │   │   │       └── JobsSteve.jhd
+│       │   │   └── JagannathaHoraTest.php
+│       │   ├── LocalityTest.php
+│       │   └── UtilityTest.php
+│       ├── Bhava
+│       │   └── BhavaTest.php
+│       ├── Dasha
+│       │   └── DashaTest.php
+│       ├── Ganita
+│       │   ├── MathTest.php
+│       │   ├── Matrix
+│       │   │   ├── MatrixBaseTest.php
+│       │   │   ├── ReflectionTest.php
+│       │   │   ├── RotationTest.php
+│       │   │   ├── ScalingTest.php
+│       │   │   └── TranslationTest.php
+│       │   ├── MatrixTest.php
+│       │   └── TimeTest.php
+│       ├── Graha
+│       │   └── GrahaTest.php
+│       ├── Panchanga
+│       │   ├── Nakshatra
+│       │   │   └── NakshatraTest.php
+│       │   ├── PanchangaTest.php
+│       │   ├── Tithi
+│       │   │   └── TithiTest.php
+│       │   ├── Vara
+│       │   │   └── VaraTest.php
+│       │   └── Yoga
+│       │       └── YogaTest.php
+│       ├── Rashi
+│       │   └── RashiTest.php
+│       ├── Tattva
+│       │   ├── AyurvedaTest.php
+│       │   ├── KarakaTest.php
+│       │   └── MahaTest.php
+│       ├── Varga
+│       │   └── VargaTest.php
+│       └── Yoga
+│           ├── Type
+│           │   ├── data
+│           │   │   ├── array-mahapurusha.php
+│           │   │   ├── array-nabhasha.php
+│           │   │   └── array-source.php
+│           │   ├── MahapurushaTest.php
+│           │   ├── NabhashaTest.php
+│           │   └── YogaBaseTest.php
+│           └── YogaTest.php
+└── tree.txt
+
+89 directories, 406 files
